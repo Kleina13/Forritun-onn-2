@@ -36,7 +36,18 @@ class Nemendur():
                 aldur = x.aldur
                 nafn = x.nafn
         print("Elsti nemi er ", nafn, " hann er ", aldur, " ára.")
-
+    def magn_nem(listi):
+        magn_tolv = 0
+        magn_har = 0
+        magn_k2 = 0
+        for x in listi:
+            if x.braut == 'Tölvubraut':
+                magn_tolv += 1
+            elif x.braut == 'Hárgreiðslubraut':
+                magn_har += 1
+            elif x.braut == 'K2':
+                magn_k2 += 1
+        print("Tölvubraut: " + str(magn_tolv) + ". Hárgreiðslubraut: " + str(magn_har) + ". K2: " + str(magn_k2) + ".")
 while True:
     print("1 - Setning")
     print("2 - Meðlimir")
@@ -52,7 +63,7 @@ while True:
         n3 = Nemendur('Gunnar', 17, 'Tölvubraut')
         n4 = Nemendur('Aðólf', 6, 'K2')
         n5 = Nemendur('Ragnar2', 16, 'Tölvubraut')
-        nemlisti = [n1, n2, n3, n4, n5]
-        Nemendur.elsti_nem(nemlisti)
+        Nemendur.elsti_nem([n1, n2, n3, n4, n5])
+        Nemendur.magn_nem([n1, n2, n3, n4, n5])
 
     elif val == 5: break
