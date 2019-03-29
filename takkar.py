@@ -1,0 +1,5 @@
+d=int(input(':'))
+k=int(input(':'))
+if d<k: print("FAKE NEWS!")
+elif k<d: print("MAGA!")
+elif d==k: print("WORLD WAR 3!")
